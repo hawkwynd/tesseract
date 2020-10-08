@@ -1,6 +1,6 @@
 ## The Tesseract - v2 of the streaming audio player 
 
-# PHP
+# Installation
 
 - include/config.inc.php  - edit this file to meet your needs and set the varables. 
-- mysql/
+- mysql/stream_mysql.sql  - create your database and import this file into it. 

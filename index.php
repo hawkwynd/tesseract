@@ -104,7 +104,7 @@ require_once('include/config.inc.php');
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="statsModalLabel">Hawkwynd Radio Nerdly Statistics</h5>
+        <h5 class="modal-title" id="statsModalLabel">Nerdly Statistics</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           
         </button>

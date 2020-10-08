@@ -1,13 +1,13 @@
 <?php
 define('SHOUTCAST_HOST', 'http://myradiowebsite.com:8000');          // url:port to your shoutcast server
-define('SHOUTCAST_ADMIN_PASS', 'mypassword');                      // admin password for accessing admin.cgi
-define('SCROBBLER_API', 'scrobbler_api_key');    // API key from lastfm to query data
-define('APPLICATION_NAME', 'My Radio station');                   // Name of your website's application
-define('NOW_PLAYING_TXT', 'Now Playing');                       // Content to display as Now Playing
-define('SITE_URL', 'http://mywebsite.com');               // used in FB share link
-define('MB_URL', '');                                           // not sure what this is for.
+define('SHOUTCAST_ADMIN_PASS', 'mypassword');                      	// admin password for accessing admin.cgi
+define('SCROBBLER_API', 'scrobbler_api_key');    					// API key from lastfm to query data
+define('APPLICATION_NAME', 'My Radio station');                   	// Name of your website's application
+define('NOW_PLAYING_TXT', 'Now Playing');                       	// Content to display as Now Playing
+define('SITE_URL', 'http://mywebsite.com');               			// used in FB share link
+define('MB_URL', '');                                           	// not sure what this is for.
 
-// Mysql creds
+// Mysql creds - fill this to meet your database server's username and database name.
 define('MYSQL_USER', 'myusern');
 define('MYSQL_USER_PASSWORD', 'mysql_password');
 define('MYSQL_DATABASE', 'mydatabaseName');
