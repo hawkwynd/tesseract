@@ -1,0 +1,6 @@
+## The Tesseract - v2 of the streaming audio player 
+
+# PHP
+
+- include/config.inc.php  - edit this file to meet your needs and set the varables. 
+- mysql/
