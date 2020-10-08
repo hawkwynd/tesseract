@@ -1,0 +1,23 @@
+@import "mixins";
+
+.members{
+  margin: 10px;
+
+  @include phone{
+    display: none;
+  }
+
+  .memberHeader{
+    font: 18px/22px "CheyenneSans-Bold";
+  }
+
+  .memberline{
+    margin: 0 4px;
+    }
+}
+
+
+.summary {
+
+
+}

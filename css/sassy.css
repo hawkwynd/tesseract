@@ -1,0 +1,766 @@
+/* ---- FONTS ------ */
+
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.12.1/css/all.css");
+
+.nerdlyContainer { display: none; margin-top:10px;}
+
+button.btn.btn-info {
+    padding: 0 6px;
+    font-weight: normal;
+    box-shadow: 2px 2px #0000004f;
+}
+
+.timebox{
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  letter-spacing: .02em;
+
+}
+
+.artist-rels{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 12px 0 0 0px;
+}
+
+.artist-rels > div{
+  margin: 0 0 6px 0;
+}
+
+.artist-rels > div:nth-child(2){
+  margin-left: 4px;
+}
+
+.artist-rels .header{
+    margin: 0 0 3px 0;
+    font-weight: bold;
+
+}
+
+.artist-rels ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#wb_MediaPlayer1 {
+  border-radius: 24px;
+  box-shadow: 1px 6px 10px #0000008f;
+  margin: 6px 10px 6px 10px;
+  background: #96b0c0;
+
+  -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+#wb_MediaPlayer1 audio{
+  width: 45%;
+}
+
+audio::-webkit-media-controls-panel
+{
+ background-color:powderblue;
+}
+
+.stream-details .song-title::before {
+  content: "";
+}
+
+.stream-details .current-song-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 70%;
+
+}
+
+.stream-details .history {
+  color: #006735;
+}
+
+.stream-details .nowplaying {
+  padding: 20px 0;
+  display: flex;
+  flex-grow: 0;
+
+}
+
+.stream-details .nowplaying-title {
+  background-color: #2164f3;
+  color: #f9f8f6;
+  text-align: center;
+  /* line-height: 30px; */
+  font-size: 16px;
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  padding: 4px 0;
+  /* border-bottom: 2px solid #3F51B5; */
+  /* border-top: 4px solid #efe5b2; */
+  box-shadow: 0px 0px 10px #00d2c6, 0px 0px 0px #00ffff;
+  display: flex;
+  justify-content: center;  
+}
+
+.nowplaying-title a{margin: 0 20px}
+
+.stream-details .artist-name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.stream-details .song-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.stream-details .artist-name::after {
+  clear: both;
+}
+
+
+.song-album, .year-label{
+
+  text-align: center;
+}
+
+
+.stream-details .thumb-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+.stream-details .thumb-container img {
+  /* display:none;   */
+  
+  box-shadow: 3px 3px 10px 0px #494a4c;
+  margin: 0 40px 20px;
+  max-width: 200px;
+}
+
+
+.recording-list-container{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-basis: -moz-available;
+    padding: 0;
+}
+
+.recording-list-container .header{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.recording-list-container ol, .recording-list-container ul{
+     list-style-type: decimal;
+     margin: 0;
+     padding: 0 10px;
+     font-size: 14px;   
+}
+.recording-list-container ul{
+    list-style-type: none;
+}
+
+li{
+  display: list-item;
+  list-style-position: inside;
+  /* width: 250px; */
+}
+
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: #d6d6d6; */
+  margin: 10px;
+}
+
+.content-container #artist-wiki ,
+.content-container #release-wiki{
+  font: 16px/22px "Open Sans";
+  flex-basis: 50%;
+  margin: 10px;
+}
+
+.content-container .summary h4, .content-container .members h4 {
+  font: 18px/22px 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:0;
+  padding: 4px;
+  background-color: #96b0c0;
+}
+
+.content-container .summary-content, .content-container .members-content{
+    margin-top: 10px;
+}
+
+.content-container .members {
+  flex-basis: 50%;
+}
+
+.audioContainer{
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 40px;
+}
+
+
+
+.stream-details {
+  font-weight: normal;
+  text-align: left;
+  cursor: default;
+  /* padding-bottom: 30px; */
+}
+
+.members {
+  margin: 10px;
+}
+
+.members .memberHeader {
+  font: 18px/22px 'Lato', sans-serif;
+}
+
+.members .memberline {
+  margin: 0 4px;
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px 20px 20px 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    margin: 0;
+  }
+}
+
+
+.main-container {
+  width: 1200px;
+}
+
+.current-song-container .article{
+  display: flex;
+    justify-content: space-between;
+    width: 20%;
+    /* border: 1px solid; */
+    /* padding: 20px 0 10px 0; */
+}
+
+.song-duration{margin-bottom: 20px;}
+
+
+
+@media (min-width: 1024px) {
+  .main-container {
+    width: 990px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-container {
+    width: 100%;
+  }
+}
+
+h3 {
+  color: #4b4b4b;
+}
+
+.fb_iframe_widget_fluid {
+  float: left;
+  margin: 0 30px 0 0;
+}
+
+.social-links {
+  margin: 20px 30px;
+}
+
+.listeners-container ul {
+  list-style: none;
+}
+
+.statistics {
+    margin: 8px 8px 0 8px;
+    padding: 4px 10px;
+    background-color: #01056d;
+    color: #d7f300fa;
+    padding: 4px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0px 4px 5px #4b4b4bab;
+}
+
+.listeners, .nerdystats, .jp-details .history, .uptime, .totalRecs {
+  font-size: small;
+  padding: 4px;
+}
+
+.extract {
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+#history h3 {
+  margin: 8px;
+  font: 24px/28px 'Lato', sans-serif;
+  letter-spacing: 3px;
+  padding: 6px;
+  background-color: #005082;
+  color: white;
+}
+
+
+.history-list-container {
+  background-color: #d6d6d6;
+  padding: 10px 4px;
+  margin: 0 8px;
+}
+
+.history-list-container .listing {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+.stream-details .app-title {
+  /* margin: 0; */
+  padding: 5px;
+  /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+
+.stream-details .app-motd {
+  text-align: center;
+  color: darkred;
+}
+
+@media (min-width: 1024px) {
+  .stream-details .app-title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  .appName:before{
+    color:#00000059;
+    font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+    content: '\f025'; /* You should use \ and not /*/
+    margin-right: 4px;
+  }
+}
+
+/* Modal Style */
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.chatLink {
+  padding: 8px;
+}
+
+.chatLink a {
+  font-family: 'Lato', sans-serif;
+  color: #2164f3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul.memberlist {list-style: none;}
+ul.memberlist li{ margin: 5px 0;}
+
+
+/* Collapsible Conntent*/
+.lowerContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+.wrap-collapsible-history, .wrap-collapsible-releases, .wrap-collapsible-about-releases{
+    /* margin: 5px 10px; */
+    /* background-color: #d6d6d6; */
+    padding: 10px;
+    /* display: flex; */
+    flex-basis: 49%;
+    flex-grow: 0;
+}
+
+
+.lbl-toggle {
+    /* display: block;
+    padding: 1rem;
+    color: #fff;
+    background: #2164f3;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.25s ease-out; */
+
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    background: #01056d;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+    box-shadow: 2px 4px 5px #3f51b5;
+  }
+  
+  .lbl-toggle:hover {
+    color: rgb(141, 247, 164);
+  }
+
+  .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+  
+    transition: transform .2s ease-out;
+  }
+  .collapsible-content .content-inner {
+
+    /* background: #fff; */
+    border: 1px solid #44444333;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+  }
+
+  .collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+  }
+
+  .toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 650px;
+  }
+
+  .toggle:checked + .lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+  }
+  
+  .toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  /* loading Cube */
+  .sk-folding-cube {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+  .loading{
+    
+    position: relative;
+    
+    left: 50%;
+  }
+  
+
+  .sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); 
+  }
+  .sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 248, 248);
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+            animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  .sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+            transform: scale(1.1) rotateZ(90deg);
+  }
+  .sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+            transform: scale(1.1) rotateZ(180deg);
+  }
+  .sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+            transform: scale(1.1) rotateZ(270deg);
+  }
+  .sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  .sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; 
+  }
+  .sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+  }
+  @-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+      -webkit-transform: perspective(140px) rotateX(-180deg);
+              transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+              transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+      -webkit-transform: perspective(140px) rotateY(180deg);
+              transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    } 
+  }
+  
+  @keyframes sk-foldCubeAngle {
+    0%, 10% {
+      -webkit-transform: perspective(140px) rotateX(-180deg);
+              transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+              transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+      -webkit-transform: perspective(140px) rotateY(180deg);
+              transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    }
+  }
+
+/* animate loading  */
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+}
+
+
+/* Mobile Media Queries iphone, etc..  */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .timebox{display:none}
+  
+  .no-mobile{display: none !important; opacity: 0 }
+  
+  .stream-details .thumb-container img {
+    /* display:none;   */
+    box-shadow: 3px 3px 10px 0px #494a4c;
+    margin: 0 0 12px 0;
+  }
+  
+  .stream-details .app-title {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    display: block;
+  
+  }
+  
+    .stream-details .current-song-container {
+      /* margin-left: 90px; */
+      min-height: 100px;
+    }
+  
+    .stream-details .song-title{
+      font-size: 18px;
+    }
+    .stream-details .artist-name {
+      font-family: 'Lato', sans-serif;
+      font-size: 22px;
+      line-height: 45px;
+    }
+    .stream-details .nowplaying {
+      font-size: 18px;
+      padding: 10px 2px;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  
+    .stream-details .nowplaying-title{    
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+      
+    .recording-list-container{
+      display: none;
+    }
+
+    .loading{
+      position:relative;
+      left: 0;
+   
+    }
+
+    .stream-details .app-title {
+      font: 18px/22px 'Lato', sans-serif;
+    }
+  
+    #wb_MediaPlayer1 audio {
+      width: 90%;
+      margin: 2px 5%;
+    }
+  
+    .current-song-container{
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-basis: 100%;
+      flex-basis: -moz-available;
+      align-items: center;
+    }
+    .recording-list-container{
+      display: none !important;
+  }
+  .artist-rels{
+      display:none;
+  }
+  .content-container, .lowerContainer{
+    flex-direction: column !important;
+  }
+  .content-container .summary {
+  display: block;
+  flex-basis: 100%;
+  padding: 3px;
+  font: 14px/18px "Open Sans";
+  }
+  .content-container .summary h4 {
+  font: 14px/16px 'Lato', sans-serif;
+  margin-bottom: 4px;
+  }
+  .stream-details {
+  padding-bottom: 20px;
+  }
+  body {
+  margin: 0;
+  }
+  .main-container {
+  width: 100%;
+  }
+  .statistics {
+  /* display: block; */
+  text-align: center;
+  
+  }
+  #history {
+  display: none;
+  }
+  .history-list-container {
+  display: none;
+  }
+
+  #wb_MediaPlayer1{
+      background-image: none !important;
+
+  }
+
+
+  }

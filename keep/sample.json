@@ -1,0 +1,296 @@
+{
+    "data": {
+        "pagination": {
+            "per_page": "20",
+            "pages": "1",
+            "page": "1",
+            "items": "10"
+        },
+        "results": [{
+            "style": ["Jazz-Funk", "Smooth Jazz"],
+            "barcode": ["MCA 2250", "MCA 2251", "\u29c8-G-\u29c8", "MCA 2250-AM2 -", "MCA 2251-AM\u2077 =", "BMI"],
+            "thumb": "https:\/\/img.discogs.com\/Iz6aqRIVWF3yGxNLL7FqrXRzR6E=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-11577520-1518881556-4714.jpeg.jpg",
+            "title": "The Crusaders - Rhapsody And Blues",
+            "type": "release",
+            "format": ["Vinyl", "LP", "Album"],
+            "uri": "\/The-Crusaders-Rhapsody-And-Blues\/release\/11577520",
+            "community": {
+                "want": "7",
+                "have": "35"
+            },
+            "label": ["MCA Records", "MCA Records, Inc.", "MCA Records, Inc.", "Universal City Studios, Inc.", "Four Knights Music", "Irving Music, Inc.", "Blue Sky Rider Songs", "Crusaders Productions, Inc.", "Four Knights Music", "Irving Music, Inc.", "Blue Sky Rider Songs", "Britannia Studios", "Britannia Studios", "A&M Studios", "MCA Pressing Plant, Gloversville", "MCA Records, Inc."],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/IqE0DxtUMAbebR9XFI4ewN7Td4Q=\/fit-in\/600x603\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-11577520-1518881556-4714.jpeg.jpg",
+            "catno": "MCA-5124",
+            "master_url": "https:\/\/api.discogs.com\/masters\/47579",
+            "year": "1980",
+            "genre": ["Jazz", "Funk \/ Soul"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/11577520",
+            "master_id": "47579",
+            "format_quantity": "1",
+            "id": "11577520",
+            "formats": [{
+                "text": "Gatefold, Embossed",
+                "qty": "1",
+                "descriptions": ["LP", "Album"],
+                "name": "Vinyl"
+            }]
+        }, {
+            "style": ["Smooth Jazz", "Fusion"],
+            "barcode": ["0 76732-1662-4"],
+            "thumb": "https:\/\/img.discogs.com\/-HJyDoJSvXpBZCO1R0bLioteBO8=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-12887886-1564762176-9916.jpeg.jpg",
+            "title": "The Crusaders - Rhapsody And Blues",
+            "type": "release",
+            "format": ["Cassette", "Album"],
+            "uri": "\/The-Crusaders-Rhapsody-And-Blues\/release\/12887886",
+            "community": {
+                "want": "5",
+                "have": "2"
+            },
+            "label": ["MCA Records"],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/Q8AX3UjYGaBri0jvcACxSJOguwo=\/fit-in\/500x375\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-12887886-1564762176-9916.jpeg.jpg",
+            "catno": "MCAC-1662",
+            "master_url": "https:\/\/api.discogs.com\/masters\/47579",
+            "year": "1980",
+            "genre": ["Jazz"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/12887886",
+            "master_id": "47579",
+            "format_quantity": "1",
+            "id": "12887886",
+            "formats": [{
+                "qty": "1",
+                "descriptions": ["Album"],
+                "name": "Cassette"
+            }]
+        }, {
+            "style": ["Smooth Jazz", "Jazz-Funk", "Disco"],
+            "barcode": ["MCA2250", "MCA2251", "MCA 2250-AM4  \u25c8-P-\u25c8", "MCA 2251-AM4  \u25c8-P-\u25c8"],
+            "thumb": "https:\/\/img.discogs.com\/AajFKT7gNt1wqo7BsQ1J8uBUSGQ=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-10886975-1546526349-7938.jpeg.jpg",
+            "title": "The Crusaders - Rhapsody And Blues",
+            "type": "release",
+            "format": ["Vinyl", "LP", "Album"],
+            "uri": "\/The-Crusaders-Rhapsody-And-Blues\/release\/10886975",
+            "community": {
+                "want": "8",
+                "have": "28"
+            },
+            "label": ["MCA Records", "MCA Records", "MCA Records, Inc.", "Universal City Studios, Inc.", "MCA Pressing Plant, Pinckneyville", "Crusaders Productions, Inc."],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/lzwlt-drQ2Dx8OuSHhJ081hOZls=\/fit-in\/600x588\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-10886975-1546526349-7938.jpeg.jpg",
+            "catno": "MCA -1662",
+            "master_url": "https:\/\/api.discogs.com\/masters\/47579",
+            "year": "1980",
+            "genre": ["Electronic", "Jazz"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/10886975",
+            "master_id": "47579",
+            "format_quantity": "1",
+            "id": "10886975",
+            "formats": [{
+                "text": "Gatefold",
+                "qty": "1",
+                "descriptions": ["LP", "Album"],
+                "name": "Vinyl"
+            }]
+        }, {
+            "style": ["Smooth Jazz", "Jazz-Funk", "Disco"],
+            "barcode": ["MCA 2252-AM3", "MCA 2252-AM4"],
+            "thumb": "https:\/\/img.discogs.com\/nB8COu-GG2SJuOd6QchWfTPnIE0=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-7941315-1452099895-6637.jpeg.jpg",
+            "title": "The Crusaders - Rhapsody And Blues",
+            "type": "release",
+            "format": ["Vinyl", "LP", "Album"],
+            "uri": "\/The-Crusaders-Rhapsody-And-Blues\/release\/7941315",
+            "community": {
+                "want": "19",
+                "have": "240"
+            },
+            "label": ["MCA Records", "MCA Records"],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/P8hyiORjSK-RMWSE4SQdYmfdcjE=\/fit-in\/600x600\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-7941315-1452099895-6637.jpeg.jpg",
+            "catno": "MCA-5124",
+            "master_url": "https:\/\/api.discogs.com\/masters\/47579",
+            "year": "1980",
+            "genre": ["Electronic", "Jazz"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/7941315",
+            "master_id": "47579",
+            "format_quantity": "1",
+            "id": "7941315",
+            "formats": [{
+                "text": "Gatefold",
+                "qty": "1",
+                "descriptions": ["LP", "Album"],
+                "name": "Vinyl"
+            }]
+        }, {
+            "style": ["Jazz-Funk", "Smooth Jazz"],
+            "barcode": ["S"],
+            "thumb": "https:\/\/img.discogs.com\/fdV4Aygc-0uJzmzYYnxUlB8LftQ=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-13962421-1565007200-6558.jpeg.jpg",
+            "title": "The Crusaders - Rhapsody And Blues",
+            "type": "release",
+            "format": ["Vinyl", "LP", "Album"],
+            "uri": "\/The-Crusaders-Rhapsody-And-Blues\/release\/13962421",
+            "community": {
+                "want": "4",
+                "have": "2"
+            },
+            "label": ["MCA Records", "Columbia Records Pressing Plant, Santa Maria"],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/SOcYfvxINOIstlUGYcFHlGFR7XQ=\/fit-in\/600x604\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-13962421-1565007200-6558.jpeg.jpg",
+            "catno": "MCA-5124",
+            "master_url": "https:\/\/api.discogs.com\/masters\/47579",
+            "year": "1980",
+            "genre": ["Jazz", "Funk \/ Soul"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/13962421",
+            "master_id": "47579",
+            "format_quantity": "1",
+            "id": "13962421",
+            "formats": [{
+                "text": "Santa Maria Press",
+                "qty": "1",
+                "descriptions": ["LP", "Album"],
+                "name": "Vinyl"
+            }]
+        }, {
+            "style": ["Jazz-Funk", "Smooth Jazz"],
+            "barcode": ["MCA 2250", "MCA 2250-AM1\u25c8-P-\u25c8", "MCA 2251", "MCA 2251-AM2 \u25c8-P-\u25c8", "BMI"],
+            "thumb": "https:\/\/img.discogs.com\/TjWORcX69CkPux_H9dbjtEYsheM=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-1346069-1301962056.jpeg.jpg",
+            "title": "The Crusaders - Rhapsody And Blues",
+            "type": "release",
+            "format": ["Vinyl", "LP", "Album"],
+            "uri": "\/The-Crusaders-Rhapsody-And-Blues\/release\/1346069",
+            "community": {
+                "want": "44",
+                "have": "694"
+            },
+            "label": ["MCA Records", "MCA Records, Inc.", "MCA Records, Inc.", "Crusaders Productions, Inc.", "MCA Records, Inc.", "Universal City Studios, Inc.", "Four Knights Music", "Irving Music, Inc.", "Blue Sky Rider Songs", "MCA Pressing Plant, Pinckneyville", "Four Knights Music", "Irving Music, Inc.", "Blue Sky Rider Songs", "Britannia Studios", "Britannia Studios", "A&M Studios"],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/9YgYE-b8rsed9_i3OOzVl2jMFoo=\/fit-in\/600x600\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-1346069-1301962056.jpeg.jpg",
+            "catno": "MCA-5124",
+            "master_url": "https:\/\/api.discogs.com\/masters\/47579",
+            "year": "1980",
+            "genre": ["Jazz", "Funk \/ Soul"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/1346069",
+            "master_id": "47579",
+            "format_quantity": "1",
+            "id": "1346069",
+            "formats": [{
+                "text": "Gatefold",
+                "qty": "1",
+                "descriptions": ["LP", "Album"],
+                "name": "Vinyl"
+            }]
+        }, {
+            "style": ["Smooth Jazz", "Jazz-Funk", "Disco"],
+            "barcode": ["MCA2250", "MCA2251", "MCA 2250-AM4  \u25c8-P-\u25c8", "MCA 2251-AM4  \u25c8-P-\u25c8"],
+            "thumb": "https:\/\/img.discogs.com\/reu6YUndyZ1PDMHdd9bflroahCs=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-5314089-1424899317-3807.jpeg.jpg",
+            "title": "The Crusaders - Rhapsody And Blues",
+            "type": "release",
+            "format": ["Vinyl", "LP", "Album"],
+            "uri": "\/The-Crusaders-Rhapsody-And-Blues\/release\/5314089",
+            "community": {
+                "want": "19",
+                "have": "102"
+            },
+            "label": ["MCA Records", "MCA Records, Inc.", "Universal City Studios, Inc.", "MCA Pressing Plant, Pinckneyville", "Crusaders Productions, Inc."],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/fkLzZDIn9TuVdG6vptrq8uVRVgA=\/fit-in\/599x600\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-5314089-1424899317-3807.jpeg.jpg",
+            "catno": "MCA-5124",
+            "master_url": "https:\/\/api.discogs.com\/masters\/47579",
+            "year": "1980",
+            "genre": ["Electronic", "Jazz"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/5314089",
+            "master_id": "47579",
+            "format_quantity": "1",
+            "id": "5314089",
+            "formats": [{
+                "text": "Gatefold",
+                "qty": "1",
+                "descriptions": ["LP", "Album"],
+                "name": "Vinyl"
+            }]
+        }, {
+            "style": ["Jazz-Rock", "Fusion", "Jazz-Funk"],
+            "thumb": "https:\/\/img.discogs.com\/hP6hz2f0LutYq02IXx163siAlhs=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-14974345-1584960741-7859.jpeg.jpg",
+            "title": "The Crusaders - Live! Midnight Triangle",
+            "type": "release",
+            "format": ["VHS", "Album", "NTSC"],
+            "uri": "\/The-Crusaders-Live-Midnight-Triangle\/release\/14974345",
+            "community": {
+                "want": "0",
+                "have": "2"
+            },
+            "label": ["MCA Universal Home Video"],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/B0EQ2AVRWk7jRiIEmfXNMBZ7ejI=\/fit-in\/564x1000\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-14974345-1584960741-7859.jpeg.jpg",
+            "catno": "VHS 80185",
+            "master_url": "",
+            "year": "1985",
+            "genre": ["Jazz"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/14974345",
+            "master_id": "0",
+            "format_quantity": "1",
+            "id": "14974345",
+            "formats": [{
+                "qty": "1",
+                "descriptions": ["Album", "NTSC"],
+                "name": "VHS"
+            }]
+        }, {
+            "style": ["Soul-Jazz", "Jazz-Funk", "Disco"],
+            "barcode": ["0 7674-22057-1 3", "076742205713"],
+            "thumb": "https:\/\/img.discogs.com\/2W7oHg2MT5-LHdIaxkXOwHaat-8=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-14984487-1585268270-7613.jpeg.jpg",
+            "title": "The Crusaders - The Vocal Album",
+            "type": "release",
+            "format": ["Vinyl", "LP", "Album", "Compilation"],
+            "uri": "\/The-Crusaders-The-Vocal-Album\/release\/14984487",
+            "community": {
+                "want": "0",
+                "have": "1"
+            },
+            "label": ["MCA Records", "MCA Records, Inc.", "MCA Records, Inc.", "Warner Bros. Records Inc."],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/VkVm-srLkkPyhEBwrjJXcbAg9mQ=\/fit-in\/600x600\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-14984487-1585268270-7613.jpeg.jpg",
+            "catno": "MCA-42057",
+            "master_url": "https:\/\/api.discogs.com\/masters\/187626",
+            "year": "1987",
+            "genre": ["Jazz", "Funk \/ Soul"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/14984487",
+            "master_id": "187626",
+            "format_quantity": "1",
+            "id": "14984487",
+            "formats": [{
+                "qty": "1",
+                "descriptions": ["LP", "Album", "Compilation"],
+                "name": "Vinyl"
+            }]
+        }, {
+            "style": ["Smooth Jazz", "Jazz-Funk"],
+            "barcode": ["076732166222", "MCAD-1662 1S13  MFD BY JVC"],
+            "thumb": "https:\/\/img.discogs.com\/EeU9atSpUv-GyHmUkS4OfL8YvHw=\/fit-in\/150x150\/filters:strip_icc():format(jpeg):mode_rgb():quality(40)\/discogs-images\/R-8202070-1457091691-7683.jpeg.jpg",
+            "title": "The Crusaders - Rhapsody And Blues",
+            "type": "release",
+            "format": ["CD", "Album", "Reissue"],
+            "uri": "\/The-Crusaders-Rhapsody-And-Blues\/release\/8202070",
+            "community": {
+                "want": "7",
+                "have": "17"
+            },
+            "label": ["MCA Records", "Compact Disc Compact Price"],
+            "country": "US",
+            "cover_image": "https:\/\/img.discogs.com\/vtbqhtNzfzyQQUlC-s1zKhoWKYQ=\/fit-in\/600x600\/filters:strip_icc():format(jpeg):mode_rgb():quality(90)\/discogs-images\/R-8202070-1457091691-7683.jpeg.jpg",
+            "catno": "MCAD-1662",
+            "master_url": "https:\/\/api.discogs.com\/masters\/47579",
+            "year": "1997",
+            "genre": ["Jazz"],
+            "resource_url": "https:\/\/api.discogs.com\/releases\/8202070",
+            "master_id": "47579",
+            "format_quantity": "1",
+            "id": "8202070",
+            "formats": [{
+                "qty": "1",
+                "descriptions": ["Album", "Reissue"],
+                "name": "CD"
+            }]
+        }]
+    }
+}

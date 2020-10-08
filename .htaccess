@@ -1,0 +1,5 @@
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://stream.hawkwynd.com"
+</IfModule>
+

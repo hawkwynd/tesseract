@@ -1,0 +1,248 @@
+{
+    "action": "release",
+    "data": {
+        "status": "Accepted",
+        "labels": [{
+            "name": "Warner Bros. Records",
+            "entity_type": "1",
+            "catno": "BSK 3075",
+            "resource_url": "https:\/\/api.discogs.com\/labels\/1000",
+            "id": "1000",
+            "entity_type_name": "Label"
+        }],
+        "year": "1978",
+        "artists": [{
+            "join": "",
+            "name": "Van Halen",
+            "anv": "",
+            "tracks": "",
+            "role": "",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/94066",
+            "id": "94066"
+        }],
+        "format_quantity": "1",
+        "id": "380477",
+        "artists_sort": "Van Halen",
+        "genres": ["Rock"],
+        "thumb": "",
+        "num_for_sale": "3",
+        "title": "Van Halen",
+        "date_changed": "2014-11-02T02:47:30-08:00",
+        "master_id": "29426",
+        "lowest_price": "27.73",
+        "styles": ["Hard Rock"],
+        "released_formatted": "1978",
+        "formats": [{
+            "qty": "1",
+            "descriptions": ["LP", "Album", "Repress"],
+            "name": "Vinyl"
+        }],
+        "estimated_weight": "230",
+        "master_url": "https:\/\/api.discogs.com\/masters\/29426",
+        "released": "1978",
+        "date_added": "2005-01-21T23:27:41-08:00",
+        "extraartists": [{
+            "join": "",
+            "name": "Dave Bhang",
+            "anv": "",
+            "tracks": "",
+            "role": "Art Direction, Design",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/1858165",
+            "id": "1858165"
+        }, {
+            "join": "",
+            "name": "Michael Anthony (3)",
+            "anv": "",
+            "tracks": "",
+            "role": "Bass",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/398509",
+            "id": "398509"
+        }, {
+            "join": "",
+            "name": "Beth Naranjo",
+            "anv": "",
+            "tracks": "",
+            "role": "Coordinator [Production Coordinator]",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/689971",
+            "id": "689971"
+        }, {
+            "join": "",
+            "name": "Alex Van Halen",
+            "anv": "",
+            "tracks": "",
+            "role": "Drums",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/398510",
+            "id": "398510"
+        }, {
+            "join": "",
+            "name": "Donn Landee",
+            "anv": "",
+            "tracks": "",
+            "role": "Engineer",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/252044",
+            "id": "252044"
+        }, {
+            "join": "",
+            "name": "Kent Nebergall",
+            "anv": "",
+            "tracks": "",
+            "role": "Engineer [Second]",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/327312",
+            "id": "327312"
+        }, {
+            "join": "",
+            "name": "Peggy McCreary",
+            "anv": "",
+            "tracks": "",
+            "role": "Engineer [Second]",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/159355",
+            "id": "159355"
+        }, {
+            "join": "",
+            "name": "Eddie Van Halen",
+            "anv": "Edward Van Halen",
+            "tracks": "",
+            "role": "Guitar",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/211671",
+            "id": "211671"
+        }, {
+            "join": "",
+            "name": "Elliot Gilbert",
+            "anv": "",
+            "tracks": "",
+            "role": "Photography",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/2243943",
+            "id": "2243943"
+        }, {
+            "join": "",
+            "name": "Ted Templeman",
+            "anv": "",
+            "tracks": "",
+            "role": "Producer",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/239304",
+            "id": "239304"
+        }, {
+            "join": "",
+            "name": "David Lee Roth",
+            "anv": "David Roth",
+            "tracks": "",
+            "role": "Vocals",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/174904",
+            "id": "174904"
+        }, {
+            "join": "",
+            "name": "Alex Van Halen",
+            "anv": "",
+            "tracks": "A1, A2, A4 to B4, B6",
+            "role": "Written-By",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/398510",
+            "id": "398510"
+        }, {
+            "join": "",
+            "name": "David Lee Roth",
+            "anv": "",
+            "tracks": "A1, A2, A4 to B4, B6",
+            "role": "Written-By",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/174904",
+            "id": "174904"
+        }, {
+            "join": "",
+            "name": "Eddie Van Halen",
+            "anv": "Edward Van Halen",
+            "tracks": "A1, A2, A4 to B4, B6",
+            "role": "Written-By",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/211671",
+            "id": "211671"
+        }, {
+            "join": "",
+            "name": "Michael Anthony (3)",
+            "anv": "",
+            "tracks": "A1, A2, A4 to B4, B6",
+            "role": "Written-By",
+            "resource_url": "https:\/\/api.discogs.com\/artists\/398509",
+            "id": "398509"
+        }],
+        "tracklist": [{
+            "duration": "3:32",
+            "position": "A1",
+            "type_": "track",
+            "title": "Runnin' With The Devil"
+        }, {
+            "duration": "1:42",
+            "position": "A2",
+            "type_": "track",
+            "title": "Eruption"
+        }, {
+            "duration": "2:37",
+            "position": "A3",
+            "type_": "track",
+            "extraartists": [{
+                "join": "",
+                "name": "Ray Davies",
+                "anv": "",
+                "tracks": "",
+                "role": "Written-By",
+                "resource_url": "https:\/\/api.discogs.com\/artists\/58132",
+                "id": "58132"
+            }],
+            "title": "You Really Got Me"
+        }, {
+            "duration": "3:47",
+            "position": "A4",
+            "type_": "track",
+            "title": "Ain't Talkin' 'Bout Love"
+        }, {
+            "duration": "3:44",
+            "position": "A5",
+            "type_": "track",
+            "title": "I'm The One"
+        }, {
+            "duration": "3:30",
+            "position": "B1",
+            "type_": "track",
+            "title": "Jamie's Cryin'"
+        }, {
+            "duration": "3:00",
+            "position": "B2",
+            "type_": "track",
+            "title": "Atomic Punk"
+        }, {
+            "duration": "3:40",
+            "position": "B3",
+            "type_": "track",
+            "title": "Feel Your Love Tonight"
+        }, {
+            "duration": "3:22",
+            "position": "B4",
+            "type_": "track",
+            "title": "Little Dreamer"
+        }, {
+            "duration": "3:18",
+            "position": "B5",
+            "type_": "track",
+            "extraartists": [{
+                "join": "",
+                "name": "John Brim",
+                "anv": "",
+                "tracks": "",
+                "role": "Written-By",
+                "resource_url": "https:\/\/api.discogs.com\/artists\/682206",
+                "id": "682206"
+            }],
+            "title": "Ice Cream Man"
+        }, {
+            "duration": "3:01",
+            "position": "B6",
+            "type_": "track",
+            "title": "On Fire"
+        }],
+        "notes": "Recorded at Sunset Sound Recorders, Hollywood\r\nMastered at Warner Bros. Recording Studios, North Hollywood\r\n\r\nA1, A2, A4 to B4, B6 Published by Van Halen Music - ASCAP\r\nA3 Published by Jay Boy Music Corp. - BMI\r\nB5 Published by Arc Music Corp. - BMI\r\n\r\n\u2117 1978 Warner Bros. Records Inc.\r\n",
+        "uri": "https:\/\/www.discogs.com\/Van-Halen-Van-Halen\/release\/380477",
+        "country": "US",
+        "resource_url": "https:\/\/api.discogs.com\/releases\/380477",
+        "data_quality": "Needs Vote",
+        "recording": {
+            "title": "Ain't Talkin' 'bout Love"
+        }
+    }
+}
