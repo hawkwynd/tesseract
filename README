@@ -1,10 +1,35 @@
-## The Tesseract - v2 of the streaming audio player 
+# The Tesseract - v2 of the streaming audio player 
 
-# Installation
+## Installation
 
 - include/config.inc.php  - edit this file to meet your needs and set the varables. 
-- mysql/stream_mysql.sql  - create your database and import this file into it. 
+
+```define('SHOUTCAST_HOST', 'http://myradiowebsite.com:8000');          // url:port to your shoutcast server
+define('SHOUTCAST_ADMIN_PASS', 'mypassword');                      	// admin password for accessing admin.cgi
+define('SCROBBLER_API', 'scrobbler_api_key');    					// API key from lastfm to query data
+define('APPLICATION_NAME', 'My Radio station');                   	// Name of your website's application
+define('NOW_PLAYING_TXT', 'Now Playing');                       	// Content to display as Now Playing
+define('SITE_URL', 'http://mywebsite.com');               			// used in FB share link
+define('MB_URL', '');                                           	// not sure what this is for.
+
+// Mysql creds - fill this to meet your database server's username and database name.
+define('MYSQL_USER', 'myusern');
+define('MYSQL_USER_PASSWORD', 'mysql_password');
+define('MYSQL_DATABASE', 'mydatabaseName');
+define('MYSQL_HOST', 'localhost');
+```
+
+- mysql/stream_mysql.sql  - create your database and import this sql into it. 
+
 - js/tessa2.js            - add your Discogs api developer key/secret 
 
-Upload the entire thing to your webserver after configuring config.inc.php and importing the database file. 
+```
+// set your Discogs api key/secret here.
+var auth = { 
+    key: 'discogsKey',
+    secret: 'mydiscogsecret',
+    page: 1,
+    per_page: 10,    
+};
+```
 
