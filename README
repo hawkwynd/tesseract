@@ -4,7 +4,7 @@
 
 - include/config.inc.php  - edit this file to meet your needs and set the varables. 
 - mysql/stream_mysql.sql  - create your database and import this file into it. 
+- js/tessa2.js            - add your Discogs api developer key/secret 
 
 Upload the entire thing to your webserver after configuring config.inc.php and importing the database file. 
 
-And run it - 
