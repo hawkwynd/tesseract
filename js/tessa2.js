@@ -1,5 +1,14 @@
 // tessa2.js - discogs version version 2.0 
 
+// set your Discogs api key/secret here.
+var auth = { 
+    key: 'discogsKey',
+    secret: 'mydiscogsecret',
+    page: 1,
+    per_page: 10,    
+};
+
+
 $(document).ready(function () {
 
 // when the stats modal closes, clear nerdly content
@@ -129,12 +138,8 @@ function renderModal(i, row){
 var mastersUrl    = "https://api.discogs.com/masters/";
 var artistsUrl    = "https://api.discogs.com/artists/";
 var discogsSearch = "https://api.discogs.com/database/search";
-var auth = { 
-    key: 'jaRkJhfCzjSmakRoGyjP',
-    secret: 'MGSKueXgidqwXOxbmmtSOGfUoFHtXdfC',
-    page: 1,
-    per_page: 10,    
-};
+
+
 var render = {};
 
 // loop it every 5 seconds to check if the songs changed yet. 
