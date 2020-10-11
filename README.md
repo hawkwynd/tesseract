@@ -1,15 +1,26 @@
 # Tesseract 
-## The metadata of the Shoutcast Steaming Service
+## A Shoutcast Stream Content Application
 This is the project of Hawkwynd Radio's web front end, which is a labor of love in the search for a better display of metadata/content while a song is being played on the Shoutcast Server. My love of music, and running my own station started with a idea, and has grown to this point. It is open source, and constantly being improved/updated. Soley for personal use, I make no warranties or provide any assurance this will work on your system. 
 
-### Requirements
+This application displays the current Artist and title being played on your Shoutcast server, as well as the following objects:
+
+- Image of the album the song is from, with modal window to display large view when image is clicked on
+- Artist Members sorted by Active and Inactive (Alumni)
+- Release track listing of songs from the release the song is from
+- About Artist Wikipedia content
+- About Release Wikipedia content
+- Artist Discography in chronological order
+- Song History of the last hours played songs (Artist/Title)
+- On each new song, refresh all areas, change background color, change background image, update Now Playing banner, uptime ticker and listener counter
+
+### Requirements to make this work
 - Apache Webserver with Mysql and PHP 
 - Shoutcast Server (sc_serv) with admin access
 - Love of being a radio station kind of person, who loves music.
 
 #### NOTE: I share this repository to anyone who is looking to have a better, responsive HTML based Shoutcast Radio station front-end.
 
-### How it works
+### How it works (PSEUDO CODE)
 - Tesseract asks Shoutcast Server for current playing Artist/Title `Pink Floyd` - `Money`
 - Ajax call to Discogs API with Artist/Title which returns: release, label, image and artist objects.
 - PHP will check for a local copy of the cover image based on the release_id, if not found, it downloads it from discogs, and stores in the /img/covers directory. (make /img dir writable for Apache )
@@ -62,3 +73,8 @@ define('MYSQL_HOST', 'localhost'); // your mysql hostname
 
 ## TODO and future plans
 - Teseract to first check for local MYSQL results before making Discogs API calls and use that result instead. 
+
+Feel free to create an issue if you're experiencing one, and I'll make an honest effort to help you.
+
+Peace, Love & Joy!
+Hawkwynd Radio
