@@ -1,10 +1,19 @@
 # Tesseract 
 ## The metadata of the Shoutcast Steaming Service
 Uses the Discogs API to populate the content during the current song played.
+
+### How it works
+- Tesseract asks Shoutcast Server for current playing Artist/Title `Pink Floyd` - `Money`
+- Ajax call to Discogs API with Artist/Title which returns: release, label, image and artist objects.
+- Wikipedia api query to obtain About Artist content, About Release Content (if found)
+- Sort Release Discography of Artist
+
+
+
+
 [Hawkwynd Radio Demo](http://stream.hawkwynd.com)
 
 ![Optional Text](/docs/img/readme1.png)
-
 
 ## Installation / Configurations
 Requires MYSQL database. Set your Shoutcast configuration details and MYSQL credentials.
