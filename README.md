@@ -1,6 +1,10 @@
 # Tesseract 
 ## The metadata of the Shoutcast Steaming Service
-Uses the Discogs API to populate the content during the current song played.
+This is the project of Hawkwynd Radio's web front end, which is a labor of love in the search for a better display of metadata/content while a song is being played on the Shoutcast Server. My love of music, and running my own station started with a idea, and has grown to this point. It is open source, and constantly being improved/updated. 
+
+I share this repository to anyone who is looking to have a better, responsive HTML based Shoutcast Radio station front-end.
+
+Tesseract uses Discogs API to populate the content during the current song being played.
 
 ### How it works
 - Tesseract asks Shoutcast Server for current playing Artist/Title `Pink Floyd` - `Money`
@@ -11,7 +15,7 @@ Uses the Discogs API to populate the content during the current song played.
 
 
 
-[Hawkwynd Radio Demo](http://stream.hawkwynd.com)
+[View Hawkwynd Radio](http://stream.hawkwynd.com)
 
 ![Optional Text](/docs/img/readme1.png)
 
