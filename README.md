@@ -1,5 +1,9 @@
 # The Tesseract - v2 of the streaming audio player 
 
+![Optional Text](/docs/img/readme1.png)
+
+
+
 ## Installation / Configurations
 Requires MYSQL database. Set your Shoutcast configuration details and MYSQL credentials.
 
@@ -22,7 +26,7 @@ var auth = {
 `include/config.inc.php` 
 
  Make your configuration changes here. 
- 
+
 ```
 define('SHOUTCAST_HOST', 'http://myradiowebsite.com:8000'); // url:port to your shoutcast server
 define('SHOUTCAST_ADMIN_PASS', 'mypassword'); // admin password for accessing admin.cgi
