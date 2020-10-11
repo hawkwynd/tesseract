@@ -20,7 +20,9 @@ var auth = {
 ```
 
 `include/config.inc.php` 
+
  Make your configuration changes here. 
+ 
 ```
 define('SHOUTCAST_HOST', 'http://myradiowebsite.com:8000'); // url:port to your shoutcast server
 define('SHOUTCAST_ADMIN_PASS', 'mypassword'); // admin password for accessing admin.cgi
