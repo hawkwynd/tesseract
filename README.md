@@ -1,7 +1,9 @@
-# The Tesseract - v2 of the streaming audio player 
+# Tesseract 
+## The metadata of the Shoutcast Steaming Service
+Uses the Discogs API to populate the content during the current song played.
+[Hawkwynd Radio Demo](http://stream.hawkwynd.com)
 
 ![Optional Text](/docs/img/readme1.png)
-
 
 
 ## Installation / Configurations
