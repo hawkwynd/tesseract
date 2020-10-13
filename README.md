@@ -29,10 +29,9 @@ This application displays the current Artist and title being played on your Shou
 - Prepare all content, and update MYSQL tables with Artists, ExtraArtists, Members, Release, Recording and Wikipedia profile objects.
 - Render Page with nice fades, background image changes, and colors. 
 
-
 [View Hawkwynd Radio](http://stream.hawkwynd.com)
 
-![Optional Text](/docs/img/readme1.png)
+![Optional Text](/docs/img/readme2.png)
 
 ## Installation / Configurations
 Requires MYSQL database. Set your Shoutcast configuration details and MYSQL credentials.
