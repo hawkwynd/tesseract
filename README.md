@@ -31,11 +31,11 @@ This application displays the current Artist and title being played on your Shou
 
 [View Hawkwynd Radio](http://stream.hawkwynd.com)
 
-#### Screenshot 
+## Screenshot 
 
 ![Optional Text](/docs/img/readme2.png)
 
-#### Modal window of release display
+## Modal window of release display
 
 ![op](/docs/img/readme3.png)
 
