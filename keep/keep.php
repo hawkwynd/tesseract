@@ -44,7 +44,6 @@ class keep {
             $member['name']         =  $mysqli->real_escape_string( preg_replace('~\(.*?\)\s?~', '', $member['name']) );
             $member['resource_url'] = $mysqli->real_escape_string( $member['resource_url']);
     
-
             $sql = "INSERT INTO members ( discogs_id, artist_id, status, member_name, resource_url ) 
                 VALUES (". $member['id'] . "," . $artist_id . ",'" . $active . "','" .$member['name']."','".$member['resource_url']. "')
                 ON DUPLICATE KEY UPDATE
@@ -258,13 +257,26 @@ class keep {
      * @return obj
      */
 
-    function extraArtistByArtist( $artist_id ) {
-        global $mysqli;
-        $sql = "SELECT name, role, releases.title 'release title' FROM `extraartists` 
-                JOIN releases on releases.artist_id = extraartists.artist_id
-                WHERE extraartists.artist_id = $artist_id";
-        $results = $mysqli->query($sql);
+    function extraArtistByArtist( $release_id ) {
+        
+        try{
 
+            global $mysqli;
+            
+            $sql = "select DISTINCT name, role, releases.title, resource_url from extraartists 
+            INNER JOIN releases on releases.artist_id = extraartists.artist_id
+            where releases.discogs_id=$release_id";
+            
+            if(!$result = $mysqli->query($sql)) throw new Exception( $mysqli->error );
+
+            $out = $result->fetch_all( MYSQLI_ASSOC );
+
+            return json_encode($out, true );
+
+        
+        } catch( Exception $e ){
+            return $e->getMessage();
+        }
     }
 
 

@@ -104,7 +104,7 @@ require_once('include/config.inc.php');
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="statsModalLabel">Nerdly Statistics</h5>
+        <h5 class="modal-title" id="statsModalLabel">Hawkwynd Radio Nerdly Statistics</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           
         </button>
@@ -143,8 +143,6 @@ require_once('include/config.inc.php');
               <span class="sr-only">Next</span>
           </a>
       </div><!--//carouselKeep -->
-
-
     </div><!--//modal-body -->
       
       <div id="attribute" class="text-center"></div>
@@ -157,6 +155,23 @@ require_once('include/config.inc.php');
   </div>
 </div>
 
+<!-- ExtraArtist Modal -->
+<div class="modal fade" id="EAModal" tabindex="-1" role="dialog" aria-labelledby="statsModallLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="statsModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <div class="nerdly"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

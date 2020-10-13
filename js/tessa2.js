@@ -1,25 +1,20 @@
 // tessa2.js - discogs version version 2.0 
 
-// set your Discogs api key/secret here.
-var auth = { 
-    key: 'discogsKey',
-    secret: 'mydiscogsecret',
-    page: 1,
-    per_page: 10,    
-};
-
-
 $(document).ready(function () {
 
-// when the stats modal closes, clear nerdly content
-$('#statsModal').on('hidden.bs.modal', function(){
-    $(".nerdly").html("");
-});
+    console.log('Tesseract is listening.')
 
-// When the image modal closes, clear content of the carousel
-$('#imgModal').on('hidden.bs.modal', function(){
-    $('.carousel-inner').html('');
-});
+    // when the stats modal closes, clear nerdly content
+    $('#statsModal').on('hidden.bs.modal', function(){
+        $(".nerdly").html("");
+    });
+
+    // When the image modal closes, clear content of the carousel
+    $('#imgModal').on('hidden.bs.modal', function(){
+        $('.carousel-inner').html('');
+    });
+
+    
 
 
 
@@ -134,12 +129,18 @@ function renderModal(i, row){
  */
 
 
+
+
 // search artist/title
 var mastersUrl    = "https://api.discogs.com/masters/";
 var artistsUrl    = "https://api.discogs.com/artists/";
 var discogsSearch = "https://api.discogs.com/database/search";
-
-
+var auth = { 
+    key: 'jaRkJhfCzjSmakRoGyjP',
+    secret: 'MGSKueXgidqwXOxbmmtSOGfUoFHtXdfC',
+    page: 1,
+    per_page: 10,    
+};
 var render = {};
 
 // loop it every 5 seconds to check if the songs changed yet. 
@@ -191,6 +192,8 @@ function statistical(jsonStats) {
     // var streamAvgTime   = millisToMinutesAndSeconds(jsonStats.averagetime);
 
 
+    
+
     if( streamstatus > 0 ){
 
         // update server stats
@@ -223,14 +226,16 @@ function statistical(jsonStats) {
             
             
             // Perform lookup of artist/title pair unliess the artist is "Hawkwynd Radio"
-            if(artist != "Hawkwynd Radio"){
+            if( artist != "Hawkwynd Radio" ){
                 
-                console.log('%cDoing local search on ' + artist + ' - ' + title, 'color:green')               
+                console.log('%cMySQL search: ' + artist + ' - ' + title, 'color:yellow')               
+                
                 lookupAT(artist, title, parseAT );              
                 
                 // Just keep this as 'the way' for now. 
                 console.log('%cDiscogs search on '+ artist + ' - ' + title, 'color: yellow' );  
-                 lookupDiscogs(artist, title, auth, parseSearch );   
+                
+                lookupDiscogs(artist, title, auth, parseSearch );   
 
 
             }
@@ -256,6 +261,136 @@ function statistical(jsonStats) {
 
 } // statistcal
 
+// Lookup ExtraArtists by ReleaseID
+function lookupEA(release_id, callback){
+
+    // console.log(' function lookupEA: ' + release_id )
+    // send post query, throw results to parseAT
+    $.post('/keep/index.php', { 
+        'action' : 'extraartists',
+        'release_id' : release_id,       
+    },
+        function( results ){
+               callback(results);
+    });
+}
+
+function parseEA( mysqlResults ){
+    
+        var filterRoles = [
+          'Guitar', 'Vocals', 'Drums', 'Keyboards', 'Bass', 'Percussion', 
+          'Harmonica', 'Violin', 'Viola', 'Double Bass', 'Piano'
+        ]
+
+        var ExtraArtist = [];
+        var arr         = $.parseJSON( mysqlResults )  
+    
+        const groupAndMerge = (arr, groupBy, mergeInto) => Array.from(arr.reduce((m, o) => {
+            const curr = m.get(o[groupBy]);
+            return m.set(o[groupBy], {...o, [mergeInto]: [...(curr && curr[mergeInto] || []), o[mergeInto]]});
+        }, new Map).values());
+    
+        var extraArtists = groupAndMerge(arr, 'name', 'role');
+    
+        // console.log(extraArtists);
+
+        extraArtists.forEach((row) => {
+            
+            // console.log('checking role ' + row.role );
+            $.each(row.role, function(i, role){
+                // guitar, vocals, someting
+                var roleArr = role.split(',');
+
+                $.each(roleArr, function(k, r ){
+
+                    if( filterRoles.indexOf( r ) !== -1 ){           
+                        ExtraArtist.push({'name': row.name, 'role' : role, 'resource_url' : row.resource_url})
+                    }            
+                })
+            })
+        })
+    
+        var ResultRoles = [];
+
+        $.each(ExtraArtist, function (i, e) {
+            var matchingItems = $.grep(ResultRoles, function (item) {
+            return item.name === e.name;
+        });
+    
+        if (matchingItems.length === 0) ResultRoles.push(e);
+
+    });
+    
+    $('.active-members').html('') // clear container 
+
+    // if we got results, iterate and render them
+    if(ResultRoles.length > 0){      
+        
+        console.log('%cparseAE got results','color:yellow')
+
+        $.each( ResultRoles, function(i, row){
+
+            if( i >= 5 ) return false;
+
+            $('.active-members').append(
+                '<div class="extra-artist" data-url="'+ row.resource_url +'">' + row.name + ': ' + row.role + "</div>"
+            )
+        })
+    
+    }else{
+        
+        console.log( ResultRoles.length + ' roles found.');
+    }
+
+    // enable listener for click events on extra-artist containers
+    $('.active-members').find('.extra-artist').on('click', function(){     
+
+        getJSONData( $(this).data('url'), renderModalArtist )
+    })
+}
+
+function renderModalWiki( data ){
+    console.log( data )
+}
+
+function renderModalArtist( data ){
+
+    // console.log(data.urls)
+
+    $('#EAModal .modal-title').text(data.name);
+    
+    var profile = data.profile.trim();
+
+    if( profile[ profile.length -1 ] !=='.' ) profile += '.'
+
+    // replace profile content remove links and [] shit.
+    $('#EAModal .modal-body .nerdly').html('<div class="profile">' + profile 
+    .replace(/\[[a-z]=|\]/g, '') )
+    // .replace(/\[b/g, "").replace(/\[url=|\]/g,"")
+    // .replace(/.\s*$/, "")
+    
+    +"</div>"; 
+    
+    if(data.groups){
+            
+            $('#EAModal .modal-body .nerdly').append('<br/><h5>Other Bands/Groups</h5>');
+
+            $.each(data.groups, function(i, group){
+                if(i > 5) return false;
+                $('#EAModal .modal-body .nerdly').append('<div class="groupName">'+ group.name.replace(/\(.*?\)/g, '')+'</div>' )
+                // console.log(group.name)
+            })
+        }
+
+    $('#EAModal').modal('show')
+}
+
+function startsWith(array, key) {
+    const matcher = new RegExp(`^${key}`, 'g');
+    return array.filter( word => word.match(matcher));
+  }
+
+
 function lookupAT(artist, title, callback){
 
     // send post query, throw results to parseAT
@@ -274,8 +409,8 @@ function parseAT( mysqlResults ){
     var out = $.parseJSON( mysqlResults )  
     console.log('%cparseAT results:','color:yellow')
     console.log( out );
-}
 
+}
 
 
 function parseSearch(jsonSearchResults){
@@ -380,6 +515,8 @@ function parseSearch(jsonSearchResults){
     console.log('%cRunning parseSearch', 'color: green');
     
     firstRes            = myResults[0];
+    
+    var release_id      = firstRes.id;
     var master_id       = firstRes.master_id;   
     var imgUrl          = firstRes.thumb === "" ? firstRes.cover_image : firstRes.thumb;
     var meta            = firstRes.title;
@@ -434,6 +571,9 @@ function parseSearch(jsonSearchResults){
 
     // lookup resource_url for master
     getJSONData( resource_url, parseMaster );
+
+    // lookup ExtraArtists   
+    lookupEA( release_id, parseEA );
    
 }
 
@@ -473,6 +613,7 @@ function parseRelease( jsonReleaseResults ){
                     console.log('%cStyles: '+ results.styles, 'color:lightblue');
                     console.log('%cGenres: '+ results.genres, 'color:lightblue');
                     console.log('%cAudio: '+results.type+ ' '+ results.attribute,'color:lightblue');
+
                 }else{
                     
                     console.log('%cERROR: NO results: ' + results , 'color:red');
@@ -591,62 +732,62 @@ function parseArtist( jsonArtistResults ){
                 }
 
         // MEMBERS
-        if(jsonArtistResults.hasOwnProperty('members')){
+        // if(jsonArtistResults.hasOwnProperty('members')){
         
-            console.log('%cRunning parseArtist', 'color: green');
+        //     console.log('%cRunning parseArtist', 'color: green');
 
-            var activeMembers = jsonArtistResults.members.filter(function (item) {
-            return item.active == true;
-        });
+        //     var activeMembers = jsonArtistResults.members.filter(function (item) {
+        //     return item.active == true;
+        // });
         
-        if( activeMembers.length > 0 ){
+        // if( activeMembers.length > 0 ){
             
-                console.log('%cFound ' + activeMembers.length + ' Active Members', 'color: green');
+        //         console.log('%cFound ' + activeMembers.length + ' Active Members', 'color: green');
             
-            $('.active-members').fadeOut(1200, function(){
-                    $(this).html('<div class="header">MEMBERS</div>');
-                    $.each(activeMembers, function(idx, member){
-                    //    console.log( member.name);
-                    $('.active-members').append('<div>'+ member.name.replace(/ *\([^)]*\) */g, "")+'</div>');
-                    return idx < 8;                 
-                });
-            }).fadeIn(1200);
+        //     $('.active-members').fadeOut(1200, function(){
+        //             $(this).html('<div class="header">MEMBERS</div>');
+        //             $.each(activeMembers, function(idx, member){
+        //             //    console.log( member.name);
+        //             $('.active-members').append('<div>'+ member.name.replace(/ *\([^)]*\) */g, "")+'</div>');
+        //             return idx < 8;                 
+        //         });
+        //     }).fadeIn(1200);
 
-        } 
+        // } 
     
-        var inActiveMembers = jsonArtistResults.members.filter(function (item) {
-            return item.active == false;
-        });
+        // var inActiveMembers = jsonArtistResults.members.filter(function (item) {
+        //     return item.active == false;
+        // });
 
-        if(inActiveMembers.length >0 ){
-            console.log('%cFound ' + inActiveMembers.length + ' Inactive Members', 'color: green');
+        // if(inActiveMembers.length >0 ){
+        //     console.log('%cFound ' + inActiveMembers.length + ' Inactive Members', 'color: green');
             
-            $('.inactive-members').fadeOut(1200, function(){
+        //     $('.inactive-members').fadeOut(1200, function(){
             
-                $(this).html('<div class="header">ALUMNI</div>');
+        //         $(this).html('<div class="header">ALUMNI</div>');
             
-                $.each(inActiveMembers, function(idx, member){
-                    $('.inactive-members').append('<div>'+ member.name.replace(/ *\([^)]*\) */g, "")+'</div>');
-                    return idx < 5;
-                });
+        //         $.each(inActiveMembers, function(idx, member){
+        //             $('.inactive-members').append('<div>'+ member.name.replace(/ *\([^)]*\) */g, "")+'</div>');
+        //             return idx < 5;
+        //         });
 
-            }).fadeIn(1200);  
-        } 
+        //     }).fadeIn(1200);  
+        // } 
         
         
-    }else{
+    // }else{
         
-        $('.inactive-members').fadeOut(1200, function(){
-            console.log('%cNo inactive members found', 'color: red');
-            $(this).html('');
-        }).fadeIn(200);
+    //     $('.inactive-members').fadeOut(1200, function(){
+    //         console.log('%cNo inactive members found', 'color: red');
+    //         $(this).html('');
+    //     }).fadeIn(200);
 
-        $('.active-members').fadeOut(1200, function(){
-            console.log('%cNo active members found', 'color: red');
-            $(this).html('');
-        }).fadeIn(200);
+    //     $('.active-members').fadeOut(1200, function(){
+    //         console.log('%cNo active members found', 'color: red');
+    //         $(this).html('');
+    //     }).fadeIn(200);
 
-    } // hasOwnProp members
+    // } // hasOwnProp members
 
 
     // get Artist releases for discography
@@ -882,7 +1023,7 @@ function Wikidata(item, callback) {
     // Bands exceptions to add (band) to search
     bands =["Rush", "Cinderella", "Boston", "Saga", "Led Zeppelin", "Skid Row", "Styx", "Asia", "Genesis",
             "Scorpions", "Yes","Rainbow","Outlaws","Bad Company", "Kiss", "Kansas" , "Eagles","Chicago",
-            "Cake","America","Jambros","War"
+            "Cake","America","Jambros", "War"
     ];
 
     wp = "https://en.wikipedia.org/w/api.php?";
@@ -899,14 +1040,14 @@ function Wikidata(item, callback) {
     if(bands.indexOf(qq) != -1){
         // qs = qq+' (band)';
         console.log('%c'+ qs + ' found. ', 'color: green' );
-        qs = qq+ ' (band)';
+        qs = qq + ' (band)';
         // console.log(qs);
     }
     
 
     url = wp+aq+t+ qs + p + r + c + f;  
    
-    // console.log( encodeURI(url) );
+    console.log( 'calling: ' + encodeURI(url) );
 
     $.getJSON(url, function (json) {
         
@@ -925,7 +1066,7 @@ function Wikidata(item, callback) {
 function releaseWikidata( releaseTitle , releaseCall) {
 
 
-    console.log('%cRunning Release Wikidata' + releaseTitle , 'color: yellow');
+    console.log('%creleaseWikidata: ' + releaseTitle , 'color: yellow');
    
     wp = "https://en.wikipedia.org/w/api.php?";
     aq = "action=query" ;
@@ -939,14 +1080,18 @@ function releaseWikidata( releaseTitle , releaseCall) {
 
     url = wp+aq+t+ releaseTitle + p + r + c + f;  
    
-    // console.log( encodeURI(url) );
+    // console.log('calling ' + encodeURI(url) );
 
     $.getJSON(url, function (json) {
+        
         var item_id = Object.keys(json.query.pages)[0]; // THIS DO THE TRICK !
         var extract = json.query.pages[item_id].extract;
 
         if(extract){
+
+            // console.log('Extract: ' + extract )
             releaseCall( releaseTitle, extract );
+
         }else{
             // clear container
             $('.wrap-collapsible-about-releases').fadeOut(1200, function(){ $(this).html(''); });

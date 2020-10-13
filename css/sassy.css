@@ -5,6 +5,18 @@
 
 .nerdlyContainer { display: none; margin-top:10px;}
 
+.profile{
+    background: lightcyan;
+    padding: 10px;
+    border: 1px solid lightslategray;
+}
+
+.extra-artist{
+    line-height: 28px;
+    cursor: pointer;
+    text-decoration: dashed;
+}
+
 button.btn.btn-info {
     padding: 0 6px;
     font-weight: normal;
@@ -367,7 +379,58 @@ h3 {
     content: '\f025'; /* You should use \ and not /*/
     margin-right: 4px;
   }
+
+  .extra-artist:hover{
+      text-decoration: underline;
+  }
+  .extra-artist:after{
+    font-family: "Font Awesome 5 Free";
+    content: '\f06e';
+    margin-left: 6px;
+    font-size: 18px;
+    /* color: deepskyblue; */
+    float: right;
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  #EAModal .modal-dialog{
+      max-width: 700px;
+  }
+
+  #EAModal .modal-header{
+      padding: 0;
+      display: block;
+
+  }
+  #EAModal .modal-body{
+    padding: 1rem 0;
+  }
+  #EAModal .modal-title{
+    background-color: #2164f3;
+    color: #f9f8f6;
+    text-align: center;
+    /* line-height: 30px; */
+    font-size: 16px;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    padding: 10px 0;
+    /* border-bottom: 2px solid #3F51B5; */
+    /* border-top: 4px solid #efe5b2; */
+    box-shadow: 0px 0px 10px #00d2c6, 0px 0px 0px #00ffff;
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 100%;
+  }
+  #EAModal .btn-secondary {
+    background-color: #0062cc;
+  }
+  #EAModal .groupName{
+      margin-left: 10px;
+  }
+
 }
+
 
 /* Modal Style */
 /* The Modal (background) */

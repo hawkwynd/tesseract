@@ -86,3 +86,21 @@ if( isset( $_POST['action'] ) && $_POST['action'] == 'lookupAT' ){
     }
 
 }
+
+// extraartists by release
+if( isset( $_POST['action']) && $_POST['action'] == 'extraartists' ){
+    try{
+        
+        $results = $keep->extraArtistByArtist( $_POST['release_id'] );
+        echo $results;
+
+    }catch( Exception $e){
+        return array(
+            'error' => $e->getMessage(),
+            'func'  => 'extraartists',
+            'line'  => $e->getLine(),
+            'file'  => $e->getFile(),
+            'POST'  => $_POST
+        );
+    }
+}
