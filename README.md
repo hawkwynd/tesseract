@@ -33,6 +33,9 @@ This application displays the current Artist and title being played on your Shou
 
 ![Optional Text](/docs/img/readme2.png)
 
+Modal window of release display
+![op](/docs/img/readme3.png)
+
 ## Installation / Configurations
 Requires MYSQL database. Set your Shoutcast configuration details and MYSQL credentials.
 
